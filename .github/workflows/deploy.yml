@@ -43,7 +43,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          #BRANCH: gh-pages
-          #FOLDER: deploy_dist/top-collegues
           branch: gh-pages
           folder: deploy_dist/top-collegues
