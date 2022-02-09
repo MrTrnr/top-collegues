@@ -16,7 +16,7 @@ export class CollegueComponent implements OnInit {
 
   ngOnInit(): void {
     this.pseudo = 'moi super pseudo';
-    this.adresseUrl='https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Valentino_Rossi_2010_Qatar.jpg/420px-Valentino_Rossi_2010_Qatar.jpg';
+    this.adresseUrl='https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png';
     this.score = 15;
 
   }
