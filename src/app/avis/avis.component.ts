@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-avis',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvisComponent implements OnInit {
 
+  @Output() aviserEvt = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
+
+aviser(){
+  this.aviserEvt.emit();
+}
 
 }

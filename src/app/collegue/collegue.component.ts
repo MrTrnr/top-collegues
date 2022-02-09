@@ -10,7 +10,7 @@ export class CollegueComponent implements OnInit {
   col: Collegue = {
     pseudo: 'moi super pseudo',
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png',
-    score: 15
+    score: 0
   };
   // pseudo!: string;
   // adresseUrl!: string;
