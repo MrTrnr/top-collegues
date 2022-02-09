@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as collegue from './../model';
+import { Collegue } from './../model';
 
 @Component({
   selector: 'app-collegue',
@@ -7,18 +7,19 @@ import * as collegue from './../model';
   styleUrls: ['./collegue.component.scss']
 })
 export class CollegueComponent implements OnInit {
-  pseudo!: string;
-  adresseUrl!: string;
-  score!: number;
+  col: Collegue = {
+    pseudo: 'moi super pseudo',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png',
+    score: 15
+  };
+  // pseudo!: string;
+  // adresseUrl!: string;
+  // score!: number;
 
 
   constructor() { }
 
   ngOnInit(): void {
-    this.pseudo = 'moi super pseudo';
-    this.adresseUrl='https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png';
-    this.score = 15;
-
-  }
+    }
 
 }
