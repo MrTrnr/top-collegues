@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AvisComponent } from './avis/avis.component';
+import { CollegueComponent } from './collegue/collegue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AvisComponent
+    AvisComponent,
+    CollegueComponent
   ],
   imports: [
     BrowserModule
