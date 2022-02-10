@@ -10,6 +10,8 @@ import { Avis } from '../model';
 export class AvisComponent implements OnInit {
 
   @Output() avis = new EventEmitter<Avis>();
+
+
   constructor() { }
 
   ngOnInit(): void {

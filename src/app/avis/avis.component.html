@@ -1,4 +1,16 @@
-<button (click)="aimer()" type="button" class="btn btn-success">J'aime</button>
-<button (click)="detester()" type="button" class="btn btn-danger">
+<button
+  (click)="aimer()"
+  [disabled]="false"
+  type="button"
+  class="btn btn-success"
+>
+  J'aime
+</button>
+<button
+  (click)="detester()"
+  [disabled]="true"
+  type="button"
+  class="btn btn-danger"
+>
   Je déteste
 </button>
