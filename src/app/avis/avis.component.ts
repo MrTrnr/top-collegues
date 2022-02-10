@@ -13,6 +13,10 @@ export class AvisComponent implements OnInit {
   ngOnInit(): void {
   }
 
+aimer(){
+  this.score++;
+}
+
 aviser(){
   this.aviserEvt.emit();
 }

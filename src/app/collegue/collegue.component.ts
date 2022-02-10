@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Collegue } from './../model';
+import { Component, OnInit, Input } from '@angular/core';
+// import { Collegue } from './../model';
 
 @Component({
   selector: 'app-collegue',
@@ -7,6 +7,11 @@ import { Collegue } from './../model';
   styleUrls: ['./collegue.component.scss']
 })
 export class CollegueComponent implements OnInit {
+
+  @Input() col!: Collegue;
+
+
+
   col: Collegue = {
     pseudo: 'moi super pseudo',
     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png',
