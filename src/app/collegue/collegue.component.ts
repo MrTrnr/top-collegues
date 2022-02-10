@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Collegue } from './../model';
+import { Avis, Collegue } from './../model';
 
 @Component({
   selector: 'app-collegue',
@@ -26,5 +26,16 @@ export class CollegueComponent implements OnInit {
 
   ngOnInit(): void {
     }
+
+  traiterEvtAvis(avisEmis: Avis){
+    if (this.col){
+      if (avisEmis === Avis.AIMER){
+        this.col.score = this.col.score + 100;
+      }
+      else if(avisEmis === Avis.DETESTER){
+        this.col.score = this.col.score - 100;
+      }
+    }
+  }
 
 }

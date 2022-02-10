@@ -4,5 +4,5 @@
   <img [src]="col.photoUrl" [alt]="col.pseudo" />
   <h1>pseudo {{ col.pseudo }}</h1>
   <h2>score {{ col.score }}</h2>
-  <app-avis></app-avis>
+  <app-avis (avis)="traiterEvtAvis($event)"></app-avis>
 </div>
