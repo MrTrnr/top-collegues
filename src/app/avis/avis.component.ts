@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Avis } from '../model';
+
 
 @Component({
   selector: 'app-avis',
@@ -7,18 +9,18 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class AvisComponent implements OnInit {
 
-  @Output() aviserEvt = new EventEmitter();
+  @Output() avis = new EventEmitter<Avis>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
 aimer(){
-  this.score++;
+  this.avis.emit();
 }
 
-aviser(){
-  this.aviserEvt.emit();
+detester(){
+  this.avis.emit();
 }
 
 }
