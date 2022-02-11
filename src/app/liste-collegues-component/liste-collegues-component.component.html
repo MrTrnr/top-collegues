@@ -2,13 +2,20 @@
   <div class="row">
     <div class="col-3">
       <p>test 1</p>
-      <p>test 2</p>
-      <p>test 3</p>
-      <p>test 4</p>
-      <app-collegue
-        *ngFor="let collegueDeMaListe of collegues"
-        [col]="collegueDeMaListe"
-      ></app-collegue>
     </div>
+    <div class="col-3">
+      <p>test 2</p>
+    </div>
+    <div class="col-3">
+      <p>test 3</p>
+    </div>
+    <div class="col-3">
+      <p>test 4</p>
+    </div>
+
+    <app-collegue
+      *ngFor="let collegueDeMaListe of collegues"
+      [col]="collegueDeMaListe"
+    ></app-collegue>
   </div>
 </div>
