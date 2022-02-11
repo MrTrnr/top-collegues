@@ -16,7 +16,27 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
   }
 
   ajouter(){
+// POST sur url avec les données de type BigCollegue
+// /collegues
+// {
+//   "nom": "string",
+//   "photo": "string",
+//   "prenom": "string",
+//   "pseudo": "string"
+// }
+
     console.log(this.collegue);
+
+
     this.collegue ={};
   }
+
+  // ajouter(collegue: BigCollegue): Observable<Collegue> {
+
+  //   return this.http.post<Collegue>("https://formation-angular-collegues.herokuapp.com/api/v1", {
+  //     avis,
+  //     pseudo: collegue.pseudo
+  //   }
+  //   );
+  // }
 }
