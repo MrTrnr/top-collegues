@@ -1,8 +1,73 @@
-{{ collegue | json }}
-<form>
-  Pseudo <input type="text" name="pseudo" [(ngModel)]="collegue.pseudo" /> Nom
-  <input type="text" name="nom" [(ngModel)]="collegue.nom" /> Prénom
-  <input type="text" name="prenom" [(ngModel)]="collegue.prenom" /> Photo URL
-  <input type="text" name="photoUrl" [(ngModel)]="collegue.photoUrl" />
-  <button>Ajouter</button>
-</form>
+<p>{{ collegue | json }}</p>
+<p>Formulaire valide = {{ etatFormulaire.valid }}</p>
+<p>Formulaire dirty = {{ etatFormulaire.dirty }}</p>
+<p>Formulaire pristine = {{ etatFormulaire.pristine }}</p>
+
+<div class="container">
+  <form #etatFormulaire="ngForm">
+    <p>
+      Pseudo
+      <input
+        #etatPseudo="ngModel"
+        type="text"
+        name="pseudo"
+        [(ngModel)]="collegue.pseudo"
+        required
+      />
+    </p>
+
+    <p *ngIf="etatPseudo.invalid">Champ requis</p>
+    <p>
+      Nom
+      <input
+        #etatNom="ngModel"
+        type="text"
+        name="nom"
+        [(ngModel)]="collegue.nom"
+        required
+        minlength="2"
+      />
+    </p>
+    <p *ngIf="etatNom.invalid">
+      Champ incorrect, merci de mettre au moins 2 caractères
+    </p>
+    <p>
+      Prénom
+      <input
+        #etatPrenom="ngModel"
+        type="text"
+        name="prenom"
+        [(ngModel)]="collegue.prenom"
+        required
+        minlength="2"
+      />
+    </p>
+    <p *ngIf="etatPrenom.invalid">
+      Champ incorrect, merci de mettre au moins 2 caractères
+    </p>
+    <p></p>
+    <p>
+      Photo URL
+      <input
+        #etatPhotoUrl="ngModel"
+        type="text"
+        name="photoUrl"
+        [(ngModel)]="collegue.photoUrl"
+        required
+      />
+    </p>
+    <p *ngIf="etatPhotoUrl.invalid">Champ requis</p>
+    <button
+      *ngIf="
+        etatFormulaire.dirty &&
+        etatPseudo.valid &&
+        etatNom.valid &&
+        etatPrenom.valid &&
+        etatPhotoUrl.valid
+      "
+      (click)="ajouter()"
+    >
+      Ajouter
+    </button>
+  </form>
+</div>

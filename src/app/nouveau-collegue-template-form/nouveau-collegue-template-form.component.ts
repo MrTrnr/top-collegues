@@ -15,4 +15,8 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ajouter(){
+    console.log(this.collegue);
+    this.collegue ={};
+  }
 }
