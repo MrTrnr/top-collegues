@@ -1,12 +1,10 @@
 <div>
-  <p>collegue works!</p>
-
   <img [src]="col.photoUrl" [alt]="col.pseudo" />
   <h5>pseudo {{ col.pseudo }}</h5>
   <h5>score {{ col.score }}</h5>
   <app-avis
     (avis)="traiterEvtAvis($event)"
-    [jaimeActif]="false"
-    [jeDestesteActif]="false"
+    [jaimeActif]="boutonJaimeActif"
+    [jeDestesteActif]="boutonJeDetesteActif"
   ></app-avis>
 </div>
