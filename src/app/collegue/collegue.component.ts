@@ -8,15 +8,13 @@ import { Avis, Collegue } from './../model';
 })
 export class CollegueComponent implements OnInit {
 
-  // @Input() col!: Collegue;
+  @Input() col?: Collegue;
 
-  col: Collegue = {
-    pseudo: 'moi super pseudo',
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png',
-    score: 0
-
-
-  };
+  // col: Collegue = {
+  //   pseudo: 'moi super pseudo',
+  //   photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/ValeYellow46_Signature.png',
+  //   score: 0
+  // };
   
   boutonJaimeActif = false;
   boutonJeDetesteActif = false;
