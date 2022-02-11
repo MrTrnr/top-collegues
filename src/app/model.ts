@@ -12,10 +12,13 @@ export interface Collegue {
 
 export interface BigCollegue {
 
-    pseudo: string;
-    nom: string;
-    prenom: string;
-    photoUrl: string;
+  nom: string;
+  photo: string;
+  prenom: string;
+  pseudo: string;
+
+
+
 };
 
 export enum Avis{

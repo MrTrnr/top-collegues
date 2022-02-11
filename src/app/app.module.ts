@@ -9,6 +9,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ScorePipe } from './pipes/score.pipe';
 import { NouveauCollegueTemplateFormComponent } from './nouveau-collegue-template-form/nouveau-collegue-template-form.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,9 +24,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-  
     FormsModule,
-    
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
