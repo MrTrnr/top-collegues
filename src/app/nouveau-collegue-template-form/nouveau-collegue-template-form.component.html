@@ -1,7 +1,7 @@
-<p>{{ collegue | json }}</p>
+<!-- <p>{{ collegue | json }}</p>
 <p>Formulaire valide = {{ etatFormulaire.valid }}</p>
 <p>Formulaire dirty = {{ etatFormulaire.dirty }}</p>
-<p>Formulaire pristine = {{ etatFormulaire.pristine }}</p>
+<p>Formulaire pristine = {{ etatFormulaire.pristine }}</p> -->
 
 <div class="container">
   <form #etatFormulaire="ngForm">
@@ -58,13 +58,7 @@
     </p>
     <p *ngIf="etatPhotoUrl.invalid">Champ requis</p>
     <button
-      *ngIf="
-        etatFormulaire.dirty &&
-        etatPseudo.valid &&
-        etatNom.valid &&
-        etatPrenom.valid &&
-        etatPhotoUrl.valid
-      "
+      *ngIf="etatFormulaire.dirty && etatFormulaire.valid"
       (click)="ajouter()"
     >
       Ajouter
