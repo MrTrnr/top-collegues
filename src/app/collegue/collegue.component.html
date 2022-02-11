@@ -1,7 +1,7 @@
 <div *ngIf="col">
   <img [src]="col.photoUrl" [alt]="col.pseudo" />
   <h5>{{ col.pseudo | uppercase }}</h5>
-  <h5>{{ col.score }}</h5>
+  <h5>{{ col.score | score }}</h5>
   <app-avis
     (avis)="traiterEvtAvis($event)"
     [jaimeActif]="boutonJaimeActif"
