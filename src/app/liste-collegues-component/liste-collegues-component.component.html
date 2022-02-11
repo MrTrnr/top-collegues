@@ -1,19 +1,7 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
-      <p>test 1</p>
-    </div>
-    <div class="col-3">
-      <p>test 2</p>
-    </div>
-    <div class="col-3">
-      <p>test 3</p>
-    </div>
-    <div class="col-3">
-      <p>test 4</p>
-    </div>
-
     <app-collegue
+      class="col-4"
       *ngFor="let collegueDeMaListe of collegues"
       [col]="collegueDeMaListe"
     ></app-collegue>
