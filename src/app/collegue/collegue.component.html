@@ -2,7 +2,11 @@
   <p>collegue works!</p>
 
   <img [src]="col.photoUrl" [alt]="col.pseudo" />
-  <h1>pseudo {{ col.pseudo }}</h1>
-  <h2>score {{ col.score }}</h2>
-  <app-avis (avis)="traiterEvtAvis($event)"></app-avis>
+  <h5>pseudo {{ col.pseudo }}</h5>
+  <h5>score {{ col.score }}</h5>
+  <app-avis
+    (avis)="traiterEvtAvis($event)"
+    [jaimeActif]="false"
+    [jeDestesteActif]="false"
+  ></app-avis>
 </div>
