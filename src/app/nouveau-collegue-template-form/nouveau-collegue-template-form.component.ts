@@ -16,6 +16,7 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
   constructor(private _http:HttpClient) { }
 
   ngOnInit(): void {
+    
   }
 
   ajouter(){
