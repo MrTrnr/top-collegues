@@ -10,6 +10,7 @@ import { ScorePipe } from './pipes/score.pipe';
 import { NouveauCollegueTemplateFormComponent } from './nouveau-collegue-template-form/nouveau-collegue-template-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListeColleguesComponentComponent,
     AccueilComponent,
     ScorePipe,
-    NouveauCollegueTemplateFormComponent
+    NouveauCollegueTemplateFormComponent,
+    NomPrenomValidatorDirective
   ],
   imports: [
     BrowserModule,
