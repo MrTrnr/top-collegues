@@ -6,7 +6,7 @@
 <div class="container">
   <form #etatFormulaire="ngForm">
     <p>
-      Pseudo
+      <label>Pseudo</label>
       <input
         #etatPseudo="ngModel"
         type="text"
@@ -18,7 +18,7 @@
 
     <p *ngIf="etatPseudo.invalid">Champ requis</p>
     <p>
-      Nom
+      <label>Nom</label>
       <input
         #etatNom="ngModel"
         type="text"
@@ -32,7 +32,7 @@
       Champ incorrect, merci de mettre au moins 2 caractères
     </p>
     <p>
-      Prénom
+      <label>Prénom</label>
       <input
         #etatPrenom="ngModel"
         type="text"
@@ -47,7 +47,7 @@
     </p>
     <p></p>
     <p>
-      Photo URL
+      <label>Photo URL</label>
       <input
         #etatPhotoUrl="ngModel"
         type="text"
