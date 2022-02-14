@@ -11,7 +11,7 @@ export class NomPrenomValidatorDirective implements Validator{
   constructor() { }
 
   validate(control: AbstractControl):ValidationErrors | null {
-   if (NouveauCollegueTemplateFormComponent.nom==NouveauCollegueTemplateFormComponent.prenom){
+   if (control.value.nom==control.value.prenom){
      return {nomPrenomIdentique : true}
    }
     return null;

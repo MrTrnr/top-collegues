@@ -4,7 +4,7 @@
 <p>Formulaire pristine = {{ etatFormulaire.pristine }}</p> -->
 
 <div class="container">
-  <form appNomPrenomValidator #etatFormulaire="ngForm">
+  <form appNomPrenomValidator #monFormulaire="ngForm">
     <p>
       <label>Pseudo</label>
       <input
@@ -58,7 +58,7 @@
     </p>
     <p *ngIf="etatPhotoUrl.invalid">Champ requis</p>
     <button
-      *ngIf="etatFormulaire.dirty && etatFormulaire.valid"
+      *ngIf="monFormulaire.dirty && monFormulaire.valid"
       (click)="ajouter()"
     >
       Ajouter
