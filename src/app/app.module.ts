@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 
 const routerConfig: Routes =[
   {
@@ -20,6 +21,12 @@ const routerConfig: Routes =[
   },
   {
     path: 'accueil', component:AccueilComponent
+  },
+  {
+    path:'', pathMatch:'full', redirectTo:'/accueil'
+  },
+  {
+    path:'collegues/:id', component:DetailCollegueComponent
   }
 ]
 
@@ -33,7 +40,8 @@ const routerConfig: Routes =[
     ScorePipe,
     NouveauCollegueTemplateFormComponent,
     NomPrenomValidatorDirective,
-    MenuComponent
+    MenuComponent,
+    DetailCollegueComponent
   ],
   imports: [
     BrowserModule,
