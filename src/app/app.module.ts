@@ -11,7 +11,17 @@ import { NouveauCollegueTemplateFormComponent } from './nouveau-collegue-templat
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
+import { MenuComponent } from './menu/menu.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routerConfig: Routes =[
+  {
+    path: 'formulaire', component:NouveauCollegueTemplateFormComponent
+  },
+  {
+    path: 'accueil', component:AccueilComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -22,13 +32,14 @@ import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.d
     AccueilComponent,
     ScorePipe,
     NouveauCollegueTemplateFormComponent,
-    NomPrenomValidatorDirective
+    NomPrenomValidatorDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    RouterModule.forRoot(routerConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
