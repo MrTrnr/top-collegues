@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 import { BigCollegue } from './../model';
@@ -13,10 +14,10 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
 
   collegue: Partial<BigCollegue>={};
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http:HttpClient, private router: Router) { }
 
   ngOnInit(): void {
-    
+
   }
 
   ajouter(){
@@ -35,7 +36,9 @@ const httpOptions = {
 };
 
 this._http.post("https://formation-angular-collegues.herokuapp.com/api/v1/collegues",
-this.collegue,httpOptions).subscribe((data: any) => {console.log(data);},(error: HttpErrorResponse) => {
+this.collegue,httpOptions).subscribe((data: any) => {console.log(data);
+  this.router.navigateByUrl('/accueil')
+},(error: HttpErrorResponse) => {
 console.log("error", error);
 
 });
