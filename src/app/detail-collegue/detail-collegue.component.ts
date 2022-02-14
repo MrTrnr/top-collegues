@@ -11,16 +11,20 @@ import { DataService } from '../services/data.service';
 })
 export class DetailCollegueComponent implements OnInit {
 
-  id: Observable<string | null>;
+  // id: Observable<string | null>;
 
   msg = '';
 
-  constructor(private aRoute: ActivatedRoute, private router: Router) {
+  constructor(private aRoute: ActivatedRoute, private router: Router, private dataSrv: DataService) {
 
-    this.id =  this.aRoute.paramMap.pipe(
-      map(paramMap => paramMap.get('id'))
-    );
-   }
+    // this.id =  this.aRoute.paramMap.pipe(
+    //   map(paramMap => paramMap.get('id'))
+    // );
+
+    // this.id = paramMap.get('id');
+
+    // this.dataSrv.rechercherCollegueParPseudo(this.id)
+  }
 
   ngOnInit(): void {
 
